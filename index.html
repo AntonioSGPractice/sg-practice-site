@@ -15,7 +15,6 @@
   body::after { content: ''; position: fixed; inset: 0; z-index: 9999; pointer-events: none; opacity: 0.018; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-repeat: repeat; }
   ::selection { background: var(--text); color: var(--bg); }
   a { text-decoration: none; }
-
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 0 3rem; height: 64px; background: rgba(11,31,50,0.65); backdrop-filter: blur(32px) saturate(130%); -webkit-backdrop-filter: blur(32px) saturate(130%); border-bottom: 1px solid transparent; transition: border-color 0.5s; }
   nav.scrolled { border-bottom-color: var(--border); }
   .logo { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text); }
@@ -26,14 +25,12 @@
   .nav-cta:hover { opacity: 0.9; transform: translateY(-1px); }
   .mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
   .mobile-toggle span { display: block; width: 18px; height: 1.5px; background: var(--text); margin: 4px 0; }
-
   .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 0 3rem; max-width: 1140px; margin: 0 auto; }
   .hero-eyebrow { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-3); margin-bottom: 2rem; opacity: 0; animation: rise 0.9s cubic-bezier(0.16,1,0.3,1) 0.15s forwards; }
   .hero h1 { font-weight: 200; font-size: clamp(2.4rem, 5vw, 4.4rem); line-height: 1.08; letter-spacing: -0.035em; max-width: 820px; opacity: 0; animation: rise 0.9s cubic-bezier(0.16,1,0.3,1) 0.35s forwards; }
   .hero h1 span { color: var(--text-2); }
   .hero-body { font-size: 1.05rem; font-weight: 400; line-height: 1.8; color: var(--text-2); max-width: 540px; margin-top: 2.2rem; opacity: 0; animation: rise 0.9s cubic-bezier(0.16,1,0.3,1) 0.55s forwards; }
   .hero-actions { display: flex; gap: 1.8rem; align-items: center; margin-top: 2.8rem; opacity: 0; animation: rise 0.9s cubic-bezier(0.16,1,0.3,1) 0.75s forwards; }
-
   .btn { display: inline-flex; align-items: center; gap: 0.55rem; font-family: var(--font); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 100px; cursor: pointer; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s, background 0.3s, color 0.3s, border-color 0.3s; }
   .btn svg { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 1.5; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1); }
   .btn:hover svg { transform: translateX(3px); }
@@ -41,7 +38,6 @@
   .btn-w:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(250,248,245,0.1); }
   .btn-ghost { color: var(--text-3); background: none; padding: 0; border: none; font-weight: 400; letter-spacing: 0.02em; text-transform: none; font-size: 0.9rem; }
   .btn-ghost:hover { color: var(--text); }
-
   .rule { max-width: 1140px; margin: 0 auto; padding: 0 3rem; }
   .rule hr { border: none; height: 1px; background: var(--border); }
   section { max-width: 1140px; margin: 0 auto; padding: 6.5rem 3rem; }
@@ -49,7 +45,6 @@
   .split { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
   .split h2 { font-weight: 300; font-size: clamp(1.8rem, 3vw, 2.6rem); line-height: 1.18; letter-spacing: -0.025em; }
   .split p { font-size: 1.02rem; font-weight: 400; line-height: 1.8; color: var(--text-2); max-width: 440px; }
-
   .svc-list { margin-top: 1rem; }
   .svc { display: grid; grid-template-columns: 2.5rem 1fr auto; gap: 1rem; align-items: baseline; padding: 1.8rem 0; border-bottom: 1px solid var(--border); transition: padding-left 0.4s cubic-bezier(0.16,1,0.3,1), border-color 0.3s; }
   .svc:first-child { border-top: 1px solid var(--border); }
@@ -58,7 +53,6 @@
   .svc-t { font-size: 1.2rem; font-weight: 400; letter-spacing: -0.01em; }
   .svc-d { font-size: 0.84rem; font-weight: 400; color: var(--text-3); max-width: 260px; text-align: right; line-height: 1.5; }
   .ai-badge { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.58rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); background: var(--accent-dim); padding: 0.2rem 0.55rem; border-radius: 100px; margin-left: 0.6rem; vertical-align: middle; }
-
   .system-section { padding: 6.5rem 3rem; }
   .system-header { margin-bottom: 3.5rem; }
   .system-header h2 { font-weight: 300; font-size: clamp(1.8rem, 3vw, 2.6rem); line-height: 1.18; letter-spacing: -0.025em; margin-bottom: 1rem; }
@@ -84,13 +78,11 @@
   .sys-feat-title { font-size: 0.64rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-4); margin-bottom: 0.6rem; }
   .sys-feat h4 { font-size: 1.02rem; font-weight: 400; margin-bottom: 0.4rem; }
   .sys-feat p { font-size: 0.86rem; font-weight: 400; color: var(--text-3); line-height: 1.6; }
-
   .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-bottom: 3.5rem; }
   .stat { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 2.4rem 2rem; transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), border-color 0.3s; }
   .stat:hover { transform: translateY(-4px); border-color: var(--border-hover); }
   .stat-val { font-size: 2.6rem; font-weight: 200; letter-spacing: -0.03em; line-height: 1; margin-bottom: 0.7rem; }
   .stat-lbl { font-size: 0.86rem; font-weight: 400; color: var(--text-3); line-height: 1.5; }
-
   .cs { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 3.2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; transition: border-color 0.3s; }
   .cs:hover { border-color: var(--border-hover); }
   .cs h3 { font-size: 1.55rem; font-weight: 300; letter-spacing: -0.02em; margin-bottom: 1rem; line-height: 1.25; }
@@ -99,17 +91,14 @@
   .cs-item { padding: 1.1rem 1.2rem; border: 1px solid var(--border); border-radius: 10px; }
   .cs-item-label { font-size: 0.62rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-4); margin-bottom: 0.4rem; }
   .cs-item-val { font-size: 1rem; font-weight: 400; }
-
   .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 0.5rem; }
   .step { padding: 2rem 0; border-top: 1px solid var(--text-2); }
   .step-n { font-size: 0.62rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-4); margin-bottom: 1.4rem; }
   .step h3 { font-size: 1.3rem; font-weight: 400; letter-spacing: -0.01em; margin-bottom: 0.9rem; }
   .step p { font-size: 0.92rem; font-weight: 400; line-height: 1.75; color: var(--text-2); }
-
   .cta { text-align: center; padding: 8rem 3rem; }
   .cta h2 { font-weight: 200; font-size: clamp(2rem, 3.6vw, 3rem); letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 1.4rem; }
   .cta p { font-size: 1.02rem; font-weight: 400; color: var(--text-2); max-width: 440px; margin: 0 auto 2.6rem; line-height: 1.75; }
-
   footer { max-width: 1140px; margin: 0 auto; padding: 2.5rem 3rem 3.5rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
   .f-l { font-size: 0.85rem; color: var(--text-2); font-weight: 400; }
   .f-c a { color: var(--text-3); transition: color 0.3s; display: flex; align-items: center; }
@@ -117,13 +106,11 @@
   .f-c svg { width: 20px; height: 20px; fill: currentColor; }
   .f-r a { font-size: 0.85rem; color: var(--text-2); font-weight: 400; transition: color 0.3s; }
   .f-r a:hover { color: var(--text); }
-
   @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
   .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); }
   .reveal.vis { opacity: 1; transform: translateY(0); }
   @keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 0 0 rgba(77,164,255,0); } 50% { box-shadow: 0 0 16px 2px rgba(77,164,255,0.12); } }
   .flow-node.ai-node { animation: pulse-glow 3s ease-in-out infinite; }
-
   @media (max-width: 820px) {
     nav { padding: 0 1.25rem; height: 58px; } .nav-links { display: none; } .mobile-toggle { display: block; }
     .hero { padding: 0 1.25rem; min-height: auto; padding-top: 7rem; padding-bottom: 4rem; } .hero h1 { font-size: 2rem; line-height: 1.12; } .hero-body { font-size: 0.95rem; margin-top: 1.5rem; } .hero-actions { margin-top: 2rem; flex-direction: column; align-items: flex-start; gap: 1.2rem; }
@@ -179,6 +166,7 @@
     <div class="svc"><span class="svc-n">03</span><span class="svc-t">Personalized Speed-to-Lead <span class="ai-badge">AI</span></span><span class="svc-d">AI writes a custom SMS and email for each lead, sent in under 7 seconds</span></div>
     <div class="svc"><span class="svc-n">04</span><span class="svc-t">Adaptive Follow-Up <span class="ai-badge">AI</span></span><span class="svc-d">Non-responders get AI-written follow-ups that change with each attempt</span></div>
     <div class="svc"><span class="svc-n">05</span><span class="svc-t">Real-Time Lead Tracking</span><span class="svc-d">Every lead logged instantly with score, status, and contact history</span></div>
+    <div class="svc"><span class="svc-n">06</span><span class="svc-t">Handoff</span><span class="svc-d">Booked consultation or conversation started in your inbox</span></div>
   </div>
 </section>
 
