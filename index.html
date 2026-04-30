@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SG Practice | Practice Growth for Immigration and Citizenship Firms</title>
+<title>SG Practice — Revenue Systems for Premium Service Firms</title>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -59,8 +59,8 @@
   .system-header h2 { font-weight: 300; font-size: clamp(1.8rem, 3vw, 2.6rem); line-height: 1.18; letter-spacing: -0.025em; margin-bottom: 1rem; }
   .system-header p { font-size: 1.02rem; font-weight: 400; line-height: 1.8; color: var(--text-2); max-width: 560px; }
   .flow { display: flex; align-items: stretch; gap: 0; margin-bottom: 3rem; overflow-x: auto; padding-bottom: 1rem; }
-  .flow-step { flex: 1; min-width: 160px; display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; }
-  .flow-node { width: 100%; padding: 1.4rem 1rem; background: var(--card); border: 1px solid var(--border); border-radius: 12px; transition: border-color 0.3s, transform 0.3s; position: relative; }
+  .flow-step { flex: 1 1 0; min-width: 160px; display: flex; flex-direction: column; align-items: stretch; text-align: center; position: relative; }
+  .flow-node { flex: 1; width: 100%; padding: 1.4rem 1rem; background: var(--card); border: 1px solid var(--border); border-radius: 12px; transition: border-color 0.3s, transform 0.3s; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; }
   .flow-node:hover { border-color: var(--border-hover); transform: translateY(-2px); }
   .flow-node.ai-node { border-color: rgba(77,164,255,0.25); }
   .flow-node.ai-node::before { content: ''; position: absolute; inset: -1px; border-radius: 12px; background: linear-gradient(135deg, rgba(77,164,255,0.08), transparent 60%); pointer-events: none; }
@@ -70,7 +70,7 @@
   .flow-icon.ai-icon svg { stroke: var(--accent); }
   .flow-label { font-size: 0.76rem; font-weight: 500; letter-spacing: 0.02em; margin-bottom: 0.3rem; }
   .flow-sub { font-size: 0.72rem; font-weight: 400; color: var(--text-3); line-height: 1.4; }
-  .flow-time { font-size: 0.62rem; font-weight: 500; color: var(--accent); margin-top: 0.5rem; letter-spacing: 0.04em; }
+  .flow-time { font-size: 0.62rem; font-weight: 500; color: var(--accent); margin-top: auto; padding-top: 0.6rem; letter-spacing: 0.04em; }
   .flow-arrow { display: flex; align-items: center; justify-content: center; width: 36px; flex-shrink: 0; color: var(--text-4); }
   .flow-arrow svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.2; }
   .system-bottom { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
@@ -144,9 +144,9 @@
 </nav>
 
 <header class="hero">
-  <p class="hero-eyebrow">Practice Growth Infrastructure</p>
-  <h1>We help Immigration and Citizenship firms <span>grow caseload</span> predictably.</h1>
-  <p class="hero-body">We design and install end-to-end intake systems for Immigration and Citizenship firms. Every prospect is qualified, contacted within seconds, and followed up with consistently — turning ad spend into booked consultations.</p>
+  <p class="hero-eyebrow">Revenue Systems</p>
+  <h1>We build the <span>revenue systems</span> behind premium service firms.</h1>
+  <p class="hero-body">We design and install the infrastructure that turns demand into booked revenue — paid acquisition, lead qualification, instant outreach, and pipeline visibility, engineered as one connected system.</p>
   <div class="hero-actions">
     <a href="strategy-call.html" class="btn btn-w">Book a Call <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     <a href="#results" class="btn btn-ghost">View results &darr;</a>
@@ -158,15 +158,15 @@
 <section id="services">
   <p class="label reveal">What We Do</p>
   <div class="split reveal">
-    <h2>A complete system, not another marketing vendor.</h2>
-    <p>We install end-to-end intake infrastructure that runs without your team managing it. Every lead is qualified, contacted in seconds, and followed up with consistently. You spend time on cases, not chasing inquiries.</p>
+    <h2>One system. Every layer of the funnel.</h2>
+    <p>We install the full revenue stack — acquisition, qualification, speed-to-lead, follow-up, and pipeline tracking — as one connected system. Your team works the deals. The infrastructure handles everything before that.</p>
   </div>
   <div class="svc-list reveal">
-    <div class="svc"><span class="svc-n">01</span><span class="svc-t">Inbound Lead Engine</span><span class="svc-d">Paid ads and intake forms that bring qualified prospects to you</span></div>
-    <div class="svc"><span class="svc-n">02</span><span class="svc-t">AI Lead Scoring <span class="ai-badge">AI</span></span><span class="svc-d">Every inquiry is read by AI and scored in seconds</span></div>
-    <div class="svc"><span class="svc-n">03</span><span class="svc-t">Personalized Speed-to-Lead <span class="ai-badge">AI</span></span><span class="svc-d">AI writes a custom SMS and email for each lead, sent in under 7 seconds</span></div>
-    <div class="svc"><span class="svc-n">04</span><span class="svc-t">Adaptive Follow-Up <span class="ai-badge">AI</span></span><span class="svc-d">Non-responders get AI-written follow-ups that change with each attempt</span></div>
-    <div class="svc"><span class="svc-n">05</span><span class="svc-t">Real-Time Lead Tracking</span><span class="svc-d">Every lead logged instantly with score, status, and contact history</span></div>
+    <div class="svc"><span class="svc-n">01</span><span class="svc-t">Inbound Lead Engine</span><span class="svc-d">Paid acquisition and lead capture that bring qualified prospects to you</span></div>
+    <div class="svc"><span class="svc-n">02</span><span class="svc-t">Lead Qualification</span><span class="svc-d">Every inquiry is read, scored for intent, and prioritized in seconds</span></div>
+    <div class="svc"><span class="svc-n">03</span><span class="svc-t">Speed-to-Lead</span><span class="svc-d">A custom SMS and email written for each lead, sent in under seven seconds</span></div>
+    <div class="svc"><span class="svc-n">04</span><span class="svc-t">Adaptive Follow-Up</span><span class="svc-d">Non-responders receive follow-ups that change with each attempt</span></div>
+    <div class="svc"><span class="svc-n">05</span><span class="svc-t">Pipeline Visibility</span><span class="svc-d">Every lead logged instantly with score, status, and contact history</span></div>
   </div>
 </section>
 
@@ -176,23 +176,23 @@
   <p class="label reveal">The System</p>
   <div class="system-header reveal">
     <h2>Every lead runs through an intelligence layer.</h2>
-    <p>Most agencies send the same template to every lead. Our system reads each prospect's form answers, scores their intent, and writes a personalized SMS and email unique to that person. No templates. No generic drips.</p>
+    <p>Each prospect's form answers are read, scored for intent, and matched with a personalized SMS and email written specifically for them. Sent in under seven seconds. No templates. No generic drips.</p>
   </div>
   <div class="flow reveal">
-    <div class="flow-step"><div class="flow-node"><div class="flow-icon"><svg viewBox="0 0 16 16"><path d="M2 4h12v8H2z"/><path d="M5 4V2h6v2"/></svg></div><div class="flow-label">Lead Captured</div><div class="flow-sub">Prospect submits ad form or website intake</div></div></div>
+    <div class="flow-step"><div class="flow-node"><div class="flow-icon"><svg viewBox="0 0 16 16"><path d="M2 4h12v8H2z"/><path d="M5 4V2h6v2"/></svg></div><div class="flow-label">Lead Captured</div><div class="flow-sub">Prospect submits a lead form or website inquiry</div></div></div>
     <div class="flow-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-    <div class="flow-step"><div class="flow-node ai-node"><div class="flow-icon ai-icon"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3"/><path d="M8 2v2M8 12v2M2 8h2M12 8h2M3.8 3.8l1.4 1.4M10.8 10.8l1.4 1.4M3.8 12.2l1.4-1.4M10.8 5.2l1.4-1.4"/></svg></div><div class="flow-label">AI Scores and Writes</div><div class="flow-sub">Reads form answers, assigns score, writes personalized SMS and email</div><div class="flow-time">&lt; 5 seconds</div></div></div>
+    <div class="flow-step"><div class="flow-node"><div class="flow-icon"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3"/><path d="M8 2v2M8 12v2M2 8h2M12 8h2M3.8 3.8l1.4 1.4M10.8 10.8l1.4 1.4M3.8 12.2l1.4-1.4M10.8 5.2l1.4-1.4"/></svg></div><div class="flow-label">Scored and Written</div><div class="flow-sub">Reads form answers, assigns score, writes personalized SMS and email</div><div class="flow-time">&lt; 5 seconds</div></div></div>
     <div class="flow-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
     <div class="flow-step"><div class="flow-node"><div class="flow-icon"><svg viewBox="0 0 16 16"><path d="M2 4l6 4 6-4"/><rect x="2" y="3" width="12" height="10" rx="1"/></svg></div><div class="flow-label">Instant Contact</div><div class="flow-sub">Personalized SMS and email fire simultaneously from your address</div><div class="flow-time">&lt; 7 seconds total</div></div></div>
     <div class="flow-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-    <div class="flow-step"><div class="flow-node ai-node"><div class="flow-icon ai-icon"><svg viewBox="0 0 16 16"><path d="M4 12V8a4 4 0 118 0v4"/><path d="M2 12h12"/><path d="M6 12v1a2 2 0 004 0v-1"/></svg></div><div class="flow-label">Adaptive Follow-Up</div><div class="flow-sub">AI writes new follow-ups for non-responders, up to 3 attempts</div></div></div>
+    <div class="flow-step"><div class="flow-node"><div class="flow-icon"><svg viewBox="0 0 16 16"><path d="M4 12V8a4 4 0 118 0v4"/><path d="M2 12h12"/><path d="M6 12v1a2 2 0 004 0v-1"/></svg></div><div class="flow-label">Adaptive Follow-Up</div><div class="flow-sub">New follow-ups for non-responders, up to three attempts</div></div></div>
     <div class="flow-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
     <div class="flow-step"><div class="flow-node"><div class="flow-icon"><svg viewBox="0 0 16 16"><rect x="3" y="3" width="10" height="10" rx="2"/><path d="M3 6h10"/><path d="M7 6v7"/></svg></div><div class="flow-label">Tracked and Delivered</div><div class="flow-sub">Lead scored and logged with full contact history for your team</div></div></div>
   </div>
   <div class="system-bottom reveal">
-    <div class="sys-feat"><div class="sys-feat-title">AI Lead Scoring</div><h4>Intent, not just info</h4><p>AI reads every form answer and assigns a score. High-intent leads are flagged instantly. Unqualified inquiries are filtered out before they reach you.</p></div>
-    <div class="sys-feat"><div class="sys-feat-title">Personalized Outreach</div><h4>No two messages are the same</h4><p>AI writes a unique SMS and email for each lead based on exactly what they said. Not templates. Not mail merge. Genuinely personalized.</p></div>
-    <div class="sys-feat"><div class="sys-feat-title">Delivered to You</div><h4>Every lead, scored and logged</h4><p>Leads are delivered in real time with their AI score, form answers, and full contact status. You always know where every prospect stands.</p></div>
+    <div class="sys-feat"><div class="sys-feat-title">Lead Scoring</div><h4>Intent, not just info</h4><p>Every form answer is read and scored. High-intent leads are flagged instantly. Unqualified inquiries are filtered out before they reach you.</p></div>
+    <div class="sys-feat"><div class="sys-feat-title">Personalized Outreach</div><h4>No two messages are the same</h4><p>A unique SMS and email is written for each lead based on exactly what they said. Not templates. Not mail merge. Genuinely personalized.</p></div>
+    <div class="sys-feat"><div class="sys-feat-title">Pipeline Visibility</div><h4>Every lead, scored and logged</h4><p>Leads are delivered in real time with their score, form answers, and full contact status. You always know where every prospect stands.</p></div>
   </div>
 </section>
 
@@ -202,22 +202,22 @@
   <p class="label reveal">Results</p>
   <div class="split reveal" style="margin-bottom: 3.5rem;">
     <h2>Proof it works.</h2>
-    <p>Real numbers from a real client. We installed an AI-powered acquisition system for a citizenship firm and turned it into their primary source of new business.</p>
+    <p>Real numbers from a live client. We installed the full revenue system for a citizenship firm and made it their primary source of new business.</p>
   </div>
   <div class="stats reveal">
-    <div class="stat"><div class="stat-val">109-185</div><div class="stat-lbl">Qualified inquiries per month</div></div>
+    <div class="stat"><div class="stat-val">109&ndash;185</div><div class="stat-lbl">Qualified inquiries per month</div></div>
     <div class="stat"><div class="stat-val">~$1.23</div><div class="stat-lbl">Average cost per inquiry</div></div>
-    <div class="stat"><div class="stat-val">&lt;7s</div><div class="stat-lbl">AI-personalized response time</div></div>
+    <div class="stat"><div class="stat-val">&lt;7s</div><div class="stat-lbl">Personalized response time</div></div>
   </div>
   <div class="cs reveal">
     <div>
       <h3>Luminosa Global, Dual Citizenship Firm</h3>
-      <p>Installed an AI-powered acquisition system that consistently generated 100+ qualified inquiries per month. Every inquiry was scored by AI, personally contacted via SMS and email, and logged with full tracking.</p>
+      <p>Installed an end-to-end revenue system that consistently generates 100+ qualified inquiries per month at ~$1.23 each. Every inquiry is scored, personally contacted via SMS and email within seconds, and logged with full tracking.</p>
     </div>
     <div class="cs-grid">
       <div class="cs-item"><div class="cs-item-label">Traffic</div><div class="cs-item-val">Paid social campaigns</div></div>
-      <div class="cs-item"><div class="cs-item-label">Response</div><div class="cs-item-val">AI-personalized SMS and email</div></div>
-      <div class="cs-item"><div class="cs-item-label">Tracking</div><div class="cs-item-val">Real-time lead log with AI scores</div></div>
+      <div class="cs-item"><div class="cs-item-label">Response</div><div class="cs-item-val">Personalized SMS and email</div></div>
+      <div class="cs-item"><div class="cs-item-label">Tracking</div><div class="cs-item-val">Real-time lead log with intent scores</div></div>
       <div class="cs-item"><div class="cs-item-label">Outcome</div><div class="cs-item-val">Inquiry to consultation</div></div>
     </div>
   </div>
@@ -229,17 +229,17 @@
   <p class="label reveal">How It Works</p>
   <div class="split reveal" style="margin-bottom: 2.5rem;"><h2>Three steps to a system that runs itself.</h2></div>
   <div class="steps reveal">
-    <div class="step"><p class="step-n">Step 01</p><h3>Discovery Call</h3><p>We audit your current intake flow and identify the highest-leverage gaps. You leave with a clear plan whether or not we work together.</p></div>
-    <div class="step"><p class="step-n">Step 02</p><h3>System Build</h3><p>We install your intake infrastructure: paid campaigns, lead qualification, automated speed-to-lead, follow-up sequences, and CRM integration. Typically live within 2 to 3 weeks.</p></div>
-    <div class="step"><p class="step-n">Step 03</p><h3>Optimize and Scale</h3><p>We manage and optimize the system on an ongoing basis. The infrastructure adapts as volume grows. You focus on closing cases.</p></div>
+    <div class="step"><p class="step-n">Step 01</p><h3>Strategy Call</h3><p>We audit your current pipeline and identify the highest-leverage gaps. You leave with a clear plan whether or not we work together.</p></div>
+    <div class="step"><p class="step-n">Step 02</p><h3>System Build</h3><p>We install your revenue infrastructure: paid acquisition, lead qualification, speed-to-lead, follow-up sequences, and pipeline tracking. Typically live within two to three weeks.</p></div>
+    <div class="step"><p class="step-n">Step 03</p><h3>Optimize and Scale</h3><p>We manage and optimize the system on an ongoing basis. The infrastructure adapts as volume grows. You focus on closing deals.</p></div>
   </div>
 </section>
 
 <div class="rule"><hr></div>
 
 <section class="cta">
-  <h2 class="reveal">Ready to grow your practice predictably?</h2>
-  <p class="reveal">Book a call. We'll walk through your current intake flow and show you exactly where the gaps are.</p>
+  <h2 class="reveal">Ready to install your revenue system?</h2>
+  <p class="reveal">Book a call. We'll walk through your current pipeline and show you exactly where the gaps are.</p>
   <div class="reveal"><a href="strategy-call.html" class="btn btn-w">Book a Call <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
 </section>
 
