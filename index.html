@@ -12,7 +12,7 @@
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
   :root { --bg: #091525; --card: #0D1A2C; --border: #172843; --border-hover: #243B5C; --text: #FAF8F5; --text-2: #d0dae2; --text-3: #8fa6b8; --text-4: #4e6d85; --mid: #1F2D40; --accent: #4da4ff; --accent-dim: rgba(77,164,255,0.12); --font: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
-  html { scroll-behavior: smooth; font-size: 16px; }
+  html { scroll-behavior: smooth; scroll-padding-top: 88px; font-size: 16px; }
   body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden; }
   ::selection { background: var(--text); color: var(--bg); }
   a { text-decoration: none; }
@@ -39,8 +39,6 @@
   .mobile-menu.open a:nth-of-type(4) { transition-delay: 0.28s; }
   .mobile-menu.open a:nth-of-type(5) { transition-delay: 0.40s; }
   .mobile-menu .mm-cta { margin-top: 1.5rem; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bg); background: var(--text); padding: 0.95rem 2.1rem; border-radius: 100px; align-self: flex-start; }
-  .mobile-menu .mm-divider { width: 32px; height: 1px; background: var(--border); margin: 1.5rem 0 0.5rem; opacity: 0; transition: opacity 0.5s 0.32s; }
-  .mobile-menu.open .mm-divider { opacity: 1; }
   .mobile-menu .mm-foot { position: absolute; bottom: 2.5rem; left: 2rem; right: 2rem; font-size: 0.72rem; color: var(--text-3); letter-spacing: 0.04em; opacity: 0; transition: opacity 0.5s 0.45s; }
   .mobile-menu.open .mm-foot { opacity: 1; }
   body.menu-open { overflow: hidden; }
@@ -133,6 +131,7 @@
   .flow-node.ai-node { animation: pulse-glow 3s ease-in-out infinite; }
   @media (max-width: 820px) {
     nav { padding: 0 1.25rem; height: 58px; } .nav-links { display: none; } .mobile-toggle { display: block; } .logo { margin-left: 0; }
+    html { scroll-padding-top: 78px; }
     .hero { padding: 0 1.25rem; min-height: auto; padding-top: 7rem; padding-bottom: 4rem; } .hero h1 { font-size: 2rem; line-height: 1.12; } .hero-body { font-size: 0.95rem; margin-top: 1.5rem; } .hero-actions { margin-top: 2rem; flex-direction: column; align-items: flex-start; gap: 1.2rem; }
     section, .system-section { padding: 3.5rem 1.25rem; } .rule { padding: 0 1.25rem; }
     .split { grid-template-columns: 1fr; gap: 1rem; } .split h2 { font-size: 1.6rem; } .split p { font-size: 0.95rem; }
@@ -167,7 +166,6 @@
   <a href="#system">The System</a>
   <a href="#results">Results</a>
   <a href="#process">Process</a>
-  <div class="mm-divider"></div>
   <a href="strategy-call.html" class="mm-cta">Book a Call</a>
   <div class="mm-foot">contact@sg-practice.com</div>
 </div>
