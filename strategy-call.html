@@ -8,12 +8,12 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { height: 100%; background: #091525; overflow: hidden; }
-  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; display: flex; align-items: center; justify-content: center; }
-  .calendly-inline-widget { width: 100%; max-width: 1100px; height: 100vh; min-width: 320px; }
+  html, body { min-height: 100%; background: #091525; }
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; display: flex; align-items: flex-start; justify-content: center; padding-top: 6rem; padding-bottom: 3rem; }
+  .calendly-inline-widget { width: 100%; max-width: 1100px; height: calc(100vh - 9rem); min-height: 700px; min-width: 320px; }
   @media (max-width: 820px) {
-    html, body { overflow: auto; }
-    .calendly-inline-widget { height: auto; min-height: 100vh; }
+    body { padding-top: 3rem; padding-bottom: 2rem; }
+    .calendly-inline-widget { height: auto; min-height: calc(100vh - 5rem); }
   }
 </style>
 </head>
