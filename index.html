@@ -87,16 +87,18 @@
     position: relative;
     max-width: var(--container);
     margin: 0 auto;
-    padding: 7rem var(--gutter) 4rem;
-    min-height: calc(100vh - 100px);
+    padding: 9rem var(--gutter) 5rem;
+    min-height: 88vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
   }
   .hero-index {
     position: absolute;
-    top: 7rem;
-    right: var(--gutter);
+    top: 6rem;
+    left: var(--gutter);
     font-family: var(--font-mono);
     font-size: 0.72rem;
     font-weight: 500;
@@ -105,29 +107,6 @@
     color: var(--text-4);
     opacity: 0;
     animation: rise 0.9s cubic-bezier(0.16,1,0.3,1) 0.1s forwards;
-  }
-  .hero-status {
-    position: absolute;
-    top: 7rem;
-    left: var(--gutter);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.7rem;
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--text-3);
-    opacity: 0;
-    animation: rise 0.9s cubic-bezier(0.16,1,0.3,1) 0.1s forwards;
-  }
-  .hero-status .hs-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #6BD968;
-    box-shadow: 0 0 8px rgba(107,217,104,0.5);
   }
 
   /* meta strip above hero */
@@ -164,6 +143,7 @@
     line-height: 1.0;
     letter-spacing: -0.045em;
     max-width: 14ch;
+    margin: 0 auto;
     color: var(--text);
     opacity: 0;
     animation: rise 1s cubic-bezier(0.16,1,0.3,1) 0.25s forwards;
@@ -175,12 +155,11 @@
   }
 
   .hero-row {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: start;
-    gap: 2.5rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-top: 4rem;
+    gap: 1.8rem;
+    margin-top: 3rem;
   }
   .hero-body {
     font-family: var(--font-body);
@@ -189,6 +168,7 @@
     line-height: 1.65;
     color: var(--text-2);
     max-width: 460px;
+    margin: 0 auto;
     letter-spacing: -0.005em;
     opacity: 0;
     animation: rise 1s cubic-bezier(0.16,1,0.3,1) 0.5s forwards;
@@ -197,7 +177,7 @@
     display: flex;
     gap: 1.4rem;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     opacity: 0;
     animation: rise 1s cubic-bezier(0.16,1,0.3,1) 0.7s forwards;
   }
@@ -483,16 +463,15 @@
     .nav-links { display: none; }
     .mobile-toggle { display: block; }
     html { scroll-padding-top: 78px; }
-    .hero { padding: 6rem 1.25rem 3.5rem; min-height: auto; }
-    .hero-index { display: none; }
-    .hero-status { top: 5.5rem; left: 1.25rem; font-size: 0.66rem; }
+    .hero { padding: 6.5rem 1.25rem 3.5rem; min-height: 88vh; }
+    .hero-index { top: 5.5rem; left: 1.25rem; font-size: 0.66rem; }
     .hero-meta { grid-template-columns: 1fr auto; margin-bottom: 3rem; font-size: 0.66rem; }
     .hero-meta .hm-line { display: none; }
     .hero-meta .hm-right { display: none; }
     .hero h1 { font-size: 2.4rem; line-height: 1.04; letter-spacing: -0.038em; max-width: 100%; }
-    .hero-row { grid-template-columns: 1fr; gap: 2rem; margin-top: 3rem; align-items: start; }
+    .hero-row { gap: 1.4rem; margin-top: 2.4rem; }
     .hero-body { font-size: 1rem; }
-    .hero-actions { justify-content: flex-start; flex-wrap: wrap; gap: 1.2rem; }
+    .hero-actions { justify-content: center; flex-wrap: wrap; gap: 1.2rem; }
     section { padding: 4.5rem 1.25rem; }
     .rule { padding: 0 1.25rem; }
     .sec-head { grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2.8rem; }
@@ -564,7 +543,6 @@
 </div>
 
 <header class="hero">
-  <div class="hero-status"><span class="hs-dot"></span> Currently accepting engagements</div>
   <div class="hero-index">SG / 00 — Index</div>
   <div class="hero-grid">
     <h1>Client acquisition systems <span class="h1-thin">for service businesses.</span></h1>
