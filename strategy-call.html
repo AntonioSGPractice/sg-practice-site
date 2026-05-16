@@ -73,7 +73,7 @@
     gap: 0.45rem;
     font-family: var(--font-display);
     font-weight: 600;
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     letter-spacing: -0.02em;
     color: var(--text);
     line-height: 1;
@@ -84,14 +84,14 @@
     display: inline-flex;
     align-items: center;
     gap: 0.55rem;
-    font-size: 0.88rem;
+    font-size: 0.96rem;
     font-weight: 400;
     color: var(--text-3);
     letter-spacing: -0.005em;
     transition: color 0.3s;
   }
   .nav-back:hover { color: var(--text); }
-  .nav-back svg { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 1.75; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1); }
+  .nav-back svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.75; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1); }
   .nav-back:hover svg { transform: translateX(-3px); }
 
   /* ===== MAIN ===== */
@@ -117,7 +117,7 @@
   }
   .page-index {
     font-family: var(--font-mono);
-    font-size: 0.72rem;
+    font-size: 0.78rem;
     font-weight: 500;
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -128,7 +128,7 @@
   .page-title-block h1 {
     font-family: var(--font-display);
     font-weight: 500;
-    font-size: clamp(2.2rem, 4.4vw, 3.6rem);
+    font-size: clamp(2.6rem, 5vw, 4.2rem);
     line-height: 1.04;
     letter-spacing: -0.04em;
     color: var(--text);
@@ -139,11 +139,11 @@
     letter-spacing: -0.038em;
   }
   .page-body {
-    font-size: 1.05rem;
+    font-size: 1.12rem;
     font-weight: 400;
     line-height: 1.7;
     color: var(--text-2);
-    max-width: 460px;
+    max-width: 480px;
     letter-spacing: -0.005em;
     padding-top: 0.4rem;
   }
@@ -160,7 +160,7 @@
     width: 100%;
     max-width: var(--container);
     margin: 0 auto;
-    height: 760px !important;
+    height: 940px !important;
     min-width: 320px;
     box-shadow: none !important;
     filter: none !important;
@@ -187,13 +187,13 @@
     align-items: center;
     gap: 2rem;
   }
-  .f-l { font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-3); font-weight: 500; letter-spacing: 0; text-transform: uppercase; }
+  .f-l { font-family: var(--font-mono); font-size: 0.86rem; color: var(--text-3); font-weight: 500; letter-spacing: 0; text-transform: uppercase; }
   .f-c { display: flex; justify-content: center; }
   .f-c a { color: var(--text-3); transition: color 0.3s; display: flex; align-items: center; }
   .f-c a:hover { color: var(--text); }
-  .f-c svg { width: 18px; height: 18px; fill: currentColor; }
+  .f-c svg { width: 20px; height: 20px; fill: currentColor; }
   .f-r { text-align: right; }
-  .f-r a { font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-3); font-weight: 500; transition: color 0.3s; letter-spacing: 0; }
+  .f-r a { font-family: var(--font-mono); font-size: 0.86rem; color: var(--text-3); font-weight: 500; transition: color 0.3s; letter-spacing: 0; }
   .f-r a:hover { color: var(--text); }
 
   /* ===== ANIMATIONS ===== */
@@ -202,25 +202,25 @@
   /* ===== MOBILE ===== */
   @media (max-width: 820px) {
     :root { --gutter: 1.25rem; }
-    .nav-inner { padding: 0 1.25rem; height: 60px; }
-    .logo { font-size: 0.98rem; }
-    .nav-back { font-size: 0.84rem; }
+    .nav-inner { padding: 0 1.25rem; height: 62px; }
+    .logo { font-size: 1.05rem; }
+    .nav-back { font-size: 0.92rem; }
     main { padding: 6rem 1.25rem 3rem; }
     .page-head { gap: 1.1rem; margin-bottom: 2rem; }
-    .page-index { font-size: 0.66rem; }
-    .page-title-block h1 { font-size: 2rem; line-height: 1.06; }
-    .calendly-inline-widget { height: 680px !important; }
+    .page-index { font-size: 0.74rem; }
+    .page-title-block h1 { font-size: 2.4rem; line-height: 1.06; }
+    .calendly-inline-widget { height: 860px !important; }
     footer {
       grid-template-columns: 1fr auto 1fr;
       gap: 1rem;
       padding: 2.2rem 1.25rem calc(2.5rem + env(safe-area-inset-bottom));
     }
-    .f-l { font-size: 0.72rem; }
-    .f-r a { font-size: 0.72rem; }
-    .f-c svg { width: 18px; height: 18px; }
+    .f-l { font-size: 0.8rem; }
+    .f-r a { font-size: 0.8rem; }
+    .f-c svg { width: 20px; height: 20px; }
   }
   @media (max-width: 400px) {
-    .page-title-block h1 { font-size: 1.75rem; }
+    .page-title-block h1 { font-size: 2rem; }
   }
 </style>
 </head>
