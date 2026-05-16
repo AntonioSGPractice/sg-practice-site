@@ -106,6 +106,29 @@
     opacity: 0;
     animation: rise 0.9s cubic-bezier(0.16,1,0.3,1) 0.1s forwards;
   }
+  .hero-status {
+    position: absolute;
+    top: 7rem;
+    left: var(--gutter);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    opacity: 0;
+    animation: rise 0.9s cubic-bezier(0.16,1,0.3,1) 0.1s forwards;
+  }
+  .hero-status .hs-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #6BD968;
+    box-shadow: 0 0 8px rgba(107,217,104,0.5);
+  }
 
   /* meta strip above hero */
   .hero-meta {
@@ -461,7 +484,8 @@
     .mobile-toggle { display: block; }
     html { scroll-padding-top: 78px; }
     .hero { padding: 6rem 1.25rem 3.5rem; min-height: auto; }
-    .hero-index { top: 6rem; right: 1.25rem; font-size: 0.66rem; }
+    .hero-index { display: none; }
+    .hero-status { top: 5.5rem; left: 1.25rem; font-size: 0.66rem; }
     .hero-meta { grid-template-columns: 1fr auto; margin-bottom: 3rem; font-size: 0.66rem; }
     .hero-meta .hm-line { display: none; }
     .hero-meta .hm-right { display: none; }
@@ -540,6 +564,7 @@
 </div>
 
 <header class="hero">
+  <div class="hero-status"><span class="hs-dot"></span> Currently accepting engagements</div>
   <div class="hero-index">SG / 00 — Index</div>
   <div class="hero-grid">
     <h1>Client acquisition systems <span class="h1-thin">for service businesses.</span></h1>
