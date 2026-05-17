@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>SG Practice — Onboarding</title>
+<meta name="description" content="Welcome aboard. Take five minutes to share what we need to build your system.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #0A0A0B;
+    --bg-2: #0E0E10;
+    --card: #111114;
+    --border: #1F1F23;
+    --border-2: #2A2A30;
+    --border-hover: #3E3E46;
+    --text: #F4F4F5;
+    --text-2: #B4B4BB;
+    --text-3: #7E7E86;
+    --text-4: #4E4E55;
+    --accent: #FFFFFF;
+    --font-display: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-body: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'Geist Mono', 'SF Mono', Menlo, Consolas, monospace;
+    --container: 1240px;
+    --gutter: 2.5rem;
+  }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 88px; font-size: 16px; }
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    font-feature-settings: "ss01", "cv11";
+    position: relative;
+  }
+
+  ::selection { background: var(--text); color: var(--bg); }
+  a { text-decoration: none; color: inherit; }
+
+  /* ===== NAV ===== */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,11,0.7); backdrop-filter: blur(32px) saturate(140%); -webkit-backdrop-filter: blur(32px) saturate(140%); border-bottom: 1px solid transparent; transition: border-color 0.5s, background 0.4s; }
+  nav.scrolled { border-bottom-color: var(--border); background: rgba(10,10,11,0.82); }
+  .nav-inner { max-width: var(--container); margin: 0 auto; height: 72px; padding: 0 var(--gutter); display: flex; justify-content: flex-start; align-items: center; }
+  .logo { display: inline-flex; align-items: baseline; gap: 0.45rem; font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; letter-spacing: -0.02em; color: var(--text); line-height: 1; }
+
+  /* ===== HERO ===== */
+  .hero {
+    position: relative;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 9rem var(--gutter) 5rem;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-index {
+    position: absolute;
+    top: 6rem;
+    left: var(--gutter);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-4);
+    opacity: 0;
+    animation: rise 0.9s cubic-bezier(0.16,1,0.3,1) 0.1s forwards;
+  }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(2.4rem, 5.2vw, 4.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.042em;
+    max-width: 16ch;
+    margin: 0 auto;
+    color: var(--text);
+    opacity: 0;
+    animation: rise 1s cubic-bezier(0.16,1,0.3,1) 0.25s forwards;
+  }
+
+  .hero-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+    margin-top: 3rem;
+  }
+  .hero-body {
+    font-family: var(--font-body);
+    font-size: 1.12rem;
+    font-weight: 400;
+    line-height: 1.65;
+    color: var(--text-2);
+    max-width: 540px;
+    margin: 0 auto;
+    letter-spacing: -0.005em;
+    opacity: 0;
+    animation: rise 1s cubic-bezier(0.16,1,0.3,1) 0.5s forwards;
+  }
+
+  /* ===== RULE ===== */
+  .rule { max-width: var(--container); margin: 0 auto; padding: 0 var(--gutter); }
+  .rule hr { border: none; height: 1px; background: var(--border); }
+
+  /* ===== FORM SECTION ===== */
+  .form-section {
+    position: relative;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 5rem var(--gutter) 7rem;
+  }
+  .form-head {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 5rem;
+    align-items: start;
+    margin-bottom: 3rem;
+  }
+  .form-index {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-4);
+    padding-top: 0.6rem;
+    min-width: 80px;
+    white-space: nowrap;
+  }
+  .form-title-block h2 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    line-height: 1.1;
+    letter-spacing: -0.032em;
+    color: var(--text);
+    margin-bottom: 0.8rem;
+  }
+  .form-title-block p {
+    font-size: 1.04rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--text-3);
+    letter-spacing: -0.005em;
+    max-width: 580px;
+  }
+  .form-wrap {
+    position: relative;
+    margin-top: 1rem;
+  }
+  .form-wrap iframe {
+    display: block;
+    width: 100%;
+    border: none;
+    background: transparent;
+  }
+
+  /* ===== FOOTER ===== */
+  footer { max-width: var(--container); margin: 0 auto; padding: 3rem var(--gutter) 3.5rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 2rem; }
+  .f-l { font-family: var(--font-mono); font-size: 0.86rem; color: var(--text-3); font-weight: 500; letter-spacing: 0; text-transform: uppercase; }
+  .f-c { display: flex; justify-content: center; }
+  .f-c a { color: var(--text-3); transition: color 0.3s; display: flex; align-items: center; }
+  .f-c a:hover { color: var(--text); }
+  .f-c svg { width: 20px; height: 20px; fill: currentColor; }
+  .f-r { text-align: right; }
+  .f-r a { font-family: var(--font-mono); font-size: 0.86rem; color: var(--text-3); font-weight: 500; transition: color 0.3s; letter-spacing: 0; }
+  .f-r a:hover { color: var(--text); }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes rise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.vis { opacity: 1; transform: translateY(0); }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 820px) {
+    :root { --gutter: 1.25rem; }
+    .nav-inner { padding: 0 1.25rem; height: 62px; }
+    html { scroll-padding-top: 78px; }
+    .hero { padding: 6.5rem 1.25rem 3.5rem; min-height: 55vh; }
+    .hero-index { top: 5.5rem; left: 1.25rem; font-size: 0.74rem; }
+    .hero h1 { font-size: 2.7rem; line-height: 1.04; letter-spacing: -0.038em; max-width: 100%; }
+    .hero-row { gap: 1.4rem; margin-top: 2.4rem; }
+    .hero-body { font-size: 1.08rem; }
+    .rule { padding: 0 1.25rem; }
+    .form-section { padding: 3.5rem 1.25rem 5rem; }
+    .form-head { grid-template-columns: 1fr; gap: 1.2rem; margin-bottom: 2.2rem; }
+    .form-index { min-width: auto; padding-top: 0; }
+    .form-title-block h2 { font-size: 1.8rem; }
+    .form-title-block p { font-size: 1rem; }
+    footer { grid-template-columns: 1fr; text-align: center; gap: 1.2rem; padding: 2.2rem 1.25rem 3rem; }
+    .f-r { text-align: center; }
+    .f-l { font-size: 0.8rem; }
+    .f-r a { font-size: 0.8rem; }
+  }
+  @media (max-width: 400px) {
+    .hero h1 { font-size: 2.3rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">SG Practice</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-index">SG / Onboarding</div>
+  <h1>Welcome aboard.</h1>
+  <div class="hero-row">
+    <p class="hero-body">Take five minutes to share what we need. We'll have your system live within fourteen days of kickoff.</p>
+  </div>
+</header>
+
+<div class="rule"><hr></div>
+
+<section class="form-section">
+  <div class="form-head reveal">
+    <div class="form-index">SG / Form</div>
+    <div class="form-title-block">
+      <h2>Onboarding form</h2>
+      <p>Required fields are marked. If anything is uncertain, write "not sure" — we'll cover it on the kickoff call. For files over 10MB, email them to <a href="mailto:antonio@sg-practice.com" style="color: var(--text); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--text-4);">antonio@sg-practice.com</a>.</p>
+    </div>
+  </div>
+
+  <div class="form-wrap reveal">
+    <iframe data-tally-src="https://tally.so/embed/J9XVOK?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="788" frameborder="0" marginheight="0" marginwidth="0" title="SG Practice — Onboarding Form"></iframe>
+  </div>
+</section>
+
+<footer>
+  <div class="f-l">© 2026 — SG Practice</div>
+  <div class="f-c"><a href="https://www.linkedin.com/company/sgpractice/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div>
+  <div class="f-r"><a href="mailto:contact@sg-practice.com">contact@sg-practice.com</a></div>
+</footer>
+
+<script>
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function() { nav.classList.toggle('scrolled', window.scrollY > 32); }, { passive: true });
+  var io = new IntersectionObserver(function(entries) { entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('vis'); io.unobserve(e.target); } }); }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
+</script>
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+</body>
+</html>
