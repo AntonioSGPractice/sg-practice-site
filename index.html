@@ -163,13 +163,14 @@
   }
   .hero-body {
     font-family: var(--font-body);
-    font-size: 1.12rem;
+    font-size: 0.98rem;
     font-weight: 400;
-    line-height: 1.65;
+    line-height: 1.5;
     color: var(--text-2);
-    max-width: 480px;
+    max-width: none;
     margin: 0 auto;
     letter-spacing: -0.005em;
+    white-space: nowrap;
     opacity: 0;
     animation: rise 1s cubic-bezier(0.16,1,0.3,1) 0.5s forwards;
   }
@@ -223,11 +224,11 @@
   .sec-title-block h2 {
     font-family: var(--font-display);
     font-weight: 500;
-    font-size: clamp(2.2rem, 4vw, 3.5rem);
-    line-height: 1.05;
-    letter-spacing: -0.036em;
+    font-size: clamp(1.75rem, 2.8vw, 2.4rem);
+    line-height: 1.1;
+    letter-spacing: -0.032em;
     color: var(--text);
-    max-width: 14ch;
+    max-width: 16ch;
   }
   .sec-title-block .sec-body {
     font-size: 1.08rem;
@@ -305,9 +306,9 @@
   .stat-tag { font-family: var(--font-mono); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-4); }
   .stat-val {
     font-family: var(--font-display);
-    font-size: clamp(2.6rem, 4.8vw, 4rem);
+    font-size: clamp(2rem, 3.4vw, 2.8rem);
     font-weight: 500;
-    letter-spacing: -0.045em;
+    letter-spacing: -0.04em;
     line-height: 1;
     color: var(--text);
     font-variant-numeric: tabular-nums;
@@ -337,11 +338,11 @@
   .cs-head::before { content: ''; width: 18px; height: 1px; background: var(--text-4); }
   .cs h3 {
     font-family: var(--font-display);
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     font-weight: 500;
-    letter-spacing: -0.032em;
+    letter-spacing: -0.028em;
     margin-bottom: 1.2rem;
-    line-height: 1.18;
+    line-height: 1.2;
     color: var(--text);
   }
   .cs > div > p {
@@ -434,9 +435,9 @@
   .cta h2 {
     font-family: var(--font-display);
     font-weight: 500;
-    font-size: clamp(2.2rem, 4vw, 3.5rem);
-    letter-spacing: -0.038em;
-    line-height: 1.05;
+    font-size: clamp(1.75rem, 2.8vw, 2.4rem);
+    letter-spacing: -0.032em;
+    line-height: 1.1;
     margin-bottom: 2.6rem;
     color: var(--text);
   }
@@ -472,14 +473,14 @@
     .hero-meta .hm-right { display: none; }
     .hero h1 { font-size: 2.7rem; line-height: 1.04; letter-spacing: -0.038em; max-width: 100%; }
     .hero-row { gap: 1.4rem; margin-top: 2.4rem; }
-    .hero-body { font-size: 1.08rem; }
+    .hero-body { font-size: 1rem; white-space: normal; }
     .hero-actions { justify-content: center; flex-wrap: wrap; gap: 1.2rem; }
     section { padding: 4.5rem 1.25rem; }
     .rule { padding: 0 1.25rem; }
     .sec-head { grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2.8rem; }
     .sec-index { min-width: auto; padding-top: 0; }
     .sec-title-block { grid-template-columns: 1fr; gap: 1.4rem; }
-    .sec-title-block h2 { font-size: 2.2rem; max-width: 100%; }
+    .sec-title-block h2 { font-size: 1.75rem; max-width: 100%; }
     .sec-title-block .sec-body { font-size: 1.05rem; }
     .svc { grid-template-columns: 2.4rem 1fr; padding: 1.8rem 0; gap: 1.2rem; }
     .svc-t { font-size: 1.3rem; }
@@ -487,9 +488,9 @@
     .stats { grid-template-columns: 1fr; }
     .stat { padding: 2rem 1.5rem; border-right: none; border-bottom: 1px solid var(--border); }
     .stat:last-child { border-bottom: none; }
-    .stat-val { font-size: 2.8rem; }
+    .stat-val { font-size: 2.2rem; }
     .cs { grid-template-columns: 1fr; padding: 2rem 1.5rem; gap: 2rem; }
-    .cs h3 { font-size: 1.6rem; }
+    .cs h3 { font-size: 1.4rem; }
     .cs-grid { grid-template-columns: 1fr; }
     .cs-item { border-right: none !important; border-bottom: 1px solid var(--border) !important; }
     .cs-item:last-child { border-bottom: none !important; }
@@ -505,7 +506,7 @@
     .sys-feat { padding: 1.8rem 0 1.8rem 0 !important; border-right: none; border-bottom: 1px solid var(--border); }
     .sys-feat:last-child { border-bottom: none; }
     .cta { padding: 5.5rem 1.25rem; }
-    .cta h2 { font-size: 2.2rem; }
+    .cta h2 { font-size: 1.75rem; }
     .cta p { font-size: 1.05rem; }
     .cta-meta { font-size: 0.74rem; }
     .cta-meta::before, .cta-meta::after { width: 24px; }
@@ -516,7 +517,7 @@
   }
   @media (max-width: 400px) {
     .hero h1 { font-size: 2.3rem; }
-    .stat-val { font-size: 2.4rem; }
+    .stat-val { font-size: 2rem; }
   }
 </style>
 </head>
@@ -566,17 +567,14 @@
     <div class="sec-index">SG / 01 — Services</div>
     <div class="sec-title-block">
       <h2>The full stack, assembled to fit.</h2>
-      <p class="sec-body">Paid acquisition, qualification, speed-to-lead, follow-up, and pipeline tracking. We design and install the layers your business needs as one connected system. The components are proven. The build is yours.</p>
+      <p class="sec-body">Paid acquisition, an automated booking system, and pipeline tracking. We design and install all three as one connected system. The components are proven. Configured to your business.</p>
     </div>
   </div>
 
   <div class="svc-list reveal">
-    <div class="svc"><span class="svc-n">01</span><span class="svc-t">Campaign Foundation</span><span class="svc-d">Necessary surface upgrades — landing pages, site, GBP, socials</span></div>
-    <div class="svc"><span class="svc-n">02</span><span class="svc-t">Paid Acquisition</span><span class="svc-d">Channel chosen for your buyer, with lead capture built around it</span></div>
-    <div class="svc"><span class="svc-n">03</span><span class="svc-t">Lead Qualification</span><span class="svc-d">Every inquiry is read, scored for intent, and prioritized in seconds</span></div>
-    <div class="svc"><span class="svc-n">04</span><span class="svc-t">Speed-to-Lead</span><span class="svc-d">Personalized outreach written for each lead and sent the moment they come in</span></div>
-    <div class="svc"><span class="svc-n">05</span><span class="svc-t">Adaptive Follow-Up</span><span class="svc-d">Non-responders receive follow-ups that change with each attempt</span></div>
-    <div class="svc"><span class="svc-n">06</span><span class="svc-t">Pipeline Visibility</span><span class="svc-d">Every lead logged instantly with score, status, and contact history</span></div>
+    <div class="svc"><span class="svc-n">01</span><span class="svc-t">Paid Acquisition</span><span class="svc-d">The right channel for your buyer, with capture built around it</span></div>
+    <div class="svc"><span class="svc-n">02</span><span class="svc-t">Booking System</span><span class="svc-d">Every inquiry is replied to within seconds, qualified, and booked</span></div>
+    <div class="svc"><span class="svc-n">03</span><span class="svc-t">Pipeline Visibility</span><span class="svc-d">Every lead logged with score, status, and full contact history</span></div>
   </div>
 </section>
 
@@ -600,7 +598,7 @@
     <div>
       <div class="cs-head">Live engagement / 2026</div>
       <h3>End-to-end install.</h3>
-      <p>Built the foundation first: site, social presence, Google Business, and brand mark. Then installed the acquisition system on top. Every inquiry is scored, personally contacted via SMS and email within seconds, and logged with full tracking. The system is now their primary source of new business.</p>
+      <p>Paid acquisition, an automated booking system, and pipeline tracking — installed as one connected system. Every inquiry is replied to via SMS and email within seconds, qualified, and logged with full tracking. The system is now their primary source of new business.</p>
     </div>
     <div class="cs-grid">
       <div class="cs-item"><div class="cs-item-label">Traffic</div><div class="cs-item-val">Paid social campaigns</div></div>
@@ -654,7 +652,7 @@
 
   <div class="steps reveal">
     <div class="step"><p class="step-n">Step 01 — Audit</p><h3>Strategy call</h3><p>We audit your current pipeline and identify the highest-leverage gaps. You leave with a clear plan whether or not we work together.</p></div>
-    <div class="step"><p class="step-n">Step 02 — Install</p><h3>System build</h3><p>We design and install the system that fits your buyer and your channels: acquisition, qualification, outreach, follow-up, and pipeline. Live within two weeks.</p></div>
+    <div class="step"><p class="step-n">Step 02 — Install</p><h3>System build</h3><p>We design and install the system that fits your buyer: paid acquisition, automated booking, and pipeline tracking. Live within two weeks.</p></div>
     <div class="step"><p class="step-n">Step 03 — Operate</p><h3>Optimize and scale</h3><p>We manage and optimize the system on an ongoing basis. The infrastructure adapts as volume grows. You focus on closing deals.</p></div>
   </div>
 </section>
