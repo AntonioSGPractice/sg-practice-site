@@ -21,38 +21,33 @@
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
   :root {
     --bg: #FFFFFF;
-    --bg-2: #FFFFFF;
-    --card: #F0F0F0;
     --border: #E0E0E0;
     --border-2: #BBBBBB;
-    --border-hover: #888888;
     --text: #0A0A0A;
-    --text-2: #555555;
     --text-3: #999999;
     --text-4: #CCCCCC;
-    --accent: #0A0A0A;
     --font-display: 'HelveticaNowDisplay', 'Helvetica Neue', Arial, sans-serif;
     --font-body: 'HelveticaNowDisplay', 'Helvetica Neue', Arial, sans-serif;
     --font-mono: 'SF Mono', Menlo, Consolas, monospace;
     --container: 1240px;
     --gutter: 2.5rem;
     --nav-h: 72px;
-    --foot-h: 80px;
+    --foot-h: 52px;
   }
 
-  html { scroll-behavior: smooth; font-size: 16px; height: 100%; }
+  html, body {
+    height: 100%;
+    height: 100dvh;
+    overflow: hidden;
+  }
   body {
     font-family: var(--font-body);
     background: var(--bg);
     color: var(--text);
-    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
-    font-feature-settings: "ss01", "cv11";
-    position: relative;
-    min-height: 100vh;
-    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
   }
 
   ::selection { background: var(--text); color: var(--bg); }
@@ -60,39 +55,35 @@
 
   /* ===== NAV ===== */
   nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
+    flex-shrink: 0;
+    width: 100%;
     z-index: 100;
     background: var(--bg);
-    border-bottom: 0.5px solid transparent;
-    transition: border-color 0.5s, background 0.4s;
+    border-bottom: 0.5px solid var(--border);
+    height: var(--nav-h);
   }
-  nav.scrolled { border-bottom-color: var(--border); }
   .nav-inner {
     max-width: var(--container);
     margin: 0 auto;
-    height: var(--nav-h);
+    height: 100%;
     padding: 0 var(--gutter);
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   .logo {
-    display: inline-flex;
-    align-items: baseline;
-    gap: 0.45rem;
     font-family: var(--font-display);
     font-weight: 500;
     font-size: 1.15rem;
     letter-spacing: -0.02em;
     color: var(--text);
-    line-height: 1;
     transition: opacity 0.3s;
   }
   .logo:hover { opacity: 0.75; }
   .nav-links { display: flex; gap: 2.4rem; align-items: center; }
   .nav-link { font-size: 0.88rem; font-weight: 400; color: var(--text-3); transition: color 0.3s; letter-spacing: 0.06em; text-transform: uppercase; }
   .nav-link:hover { color: var(--text); }
+
   /* ===== MOBILE TOGGLE ===== */
   .mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 10px; position: fixed; top: calc(env(safe-area-inset-top, 0px) + 13px); right: 1.25rem; z-index: 115; width: 44px; height: 44px; }
   .mobile-toggle span { display: block; width: 22px; height: 1.5px; background: var(--text); margin: 5px auto; transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), opacity 0.3s; transform-origin: center; }
@@ -105,80 +96,32 @@
   .mobile-menu.open a { opacity: 1; transform: translateY(0); }
   .mobile-menu.open a:nth-of-type(1) { transition-delay: 0.10s; }
   .mobile-menu.open a:nth-of-type(2) { transition-delay: 0.20s; }
-  .mobile-menu .mm-foot { position: absolute; bottom: 2.5rem; left: 2rem; right: 2rem; font-size: 0.78rem; color: var(--text-3); opacity: 0; transition: opacity 0.5s 0.45s; font-family: var(--font-mono); letter-spacing: 0; }
+  .mobile-menu .mm-foot { position: absolute; bottom: 2.5rem; left: 2rem; font-size: 0.78rem; color: var(--text-3); opacity: 0; transition: opacity 0.5s 0.45s; font-family: var(--font-mono); }
   .mobile-menu.open .mm-foot { opacity: 1; }
-  body.menu-open { overflow: hidden; }
 
   /* ===== MAIN ===== */
   main {
-    position: relative;
-    z-index: 2;
-    max-width: var(--container);
-    width: 100%;
-    margin: 0 auto;
-    padding: calc(var(--nav-h) + 2rem) var(--gutter) 2rem;
-  }
-
-  /* ===== PAGE HEADER ===== */
-  .page-head {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0.4rem;
-    margin-bottom: 1.75rem;
-    opacity: 0;
-    animation: rise 0.9s cubic-bezier(0.16,1,0.3,1) 0.1s forwards;
-  }
-  .page-index {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    font-weight: 400;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--text-4);
-    white-space: nowrap;
-  }
-  .page-title-block h1 {
-    font-family: var(--font-display);
-    font-weight: 400;
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    line-height: 1.0;
-    letter-spacing: -0.055em;
-    color: var(--text);
-    margin-top: 0.4rem;
-  }
-  .page-title-block h1 .h1-thin {
-    font-weight: 400;
-    color: #3a3a3a;
-  }
-  .page-body {
-    font-size: 1.08rem;
-    font-weight: 400;
-    line-height: 1.7;
-    color: var(--text-2);
-    max-width: 480px;
-    letter-spacing: -0.005em;
-    margin-top: 0.4rem;
+    overflow: hidden;
+    padding: 2rem var(--gutter) 0;
   }
 
-  /* ===== CALENDLY WRAPPER ===== */
+  /* ===== BOOKING WRAP ===== */
   .booking-wrap {
-    position: relative;
-    width: 100%;
-    max-width: 1080px;
-    margin: 0 auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     opacity: 0;
-    animation: rise 0.9s cubic-bezier(0.16,1,0.3,1) 0.3s forwards;
-    border: 0.5px solid var(--border);
+    animation: rise 0.8s cubic-bezier(0.16,1,0.3,1) 0.1s forwards;
   }
   .calendly-inline-widget {
+    flex: 1;
     width: 100% !important;
-    margin: 0 auto;
     min-width: 320px;
-    height: calc(100vh - var(--nav-h) - 10rem) !important;
-    min-height: 580px;
+    height: 100% !important;
     box-shadow: none !important;
     filter: none !important;
     overflow: hidden !important;
@@ -191,58 +134,48 @@
     border: none !important;
     overflow: hidden !important;
     scrollbar-width: none !important;
+    display: block;
   }
   .calendly-inline-widget iframe::-webkit-scrollbar { display: none !important; width: 0 !important; height: 0 !important; }
 
   /* ===== FOOTER ===== */
   footer {
-    max-width: var(--container);
-    margin: 0 auto;
-    padding: 1.5rem var(--gutter);
+    flex-shrink: 0;
+    width: 100%;
+    height: var(--foot-h);
+    padding: 0 var(--gutter);
     border-top: 0.5px solid var(--border);
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     gap: 2rem;
   }
-  .f-l { font-family: var(--font-mono); font-size: 0.86rem; color: var(--text-3); font-weight: 500; letter-spacing: 0; text-transform: uppercase; }
+  .f-l { font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-3); font-weight: 500; text-transform: uppercase; }
   .f-c { display: flex; justify-content: center; }
   .f-c a { color: var(--text-3); transition: color 0.3s; display: flex; align-items: center; }
   .f-c a:hover { color: var(--text); }
-  .f-c svg { width: 20px; height: 20px; fill: currentColor; }
+  .f-c svg { width: 18px; height: 18px; fill: currentColor; }
   .f-r { text-align: right; }
-  .f-r a { font-family: var(--font-mono); font-size: 0.86rem; color: var(--text-3); font-weight: 500; transition: color 0.3s; letter-spacing: 0; }
+  .f-r a { font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-3); font-weight: 500; transition: color 0.3s; }
   .f-r a:hover { color: var(--text); }
 
   /* ===== ANIMATIONS ===== */
-  @keyframes rise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 
   /* ===== MOBILE ===== */
   @media (max-width: 820px) {
-    :root { --gutter: 1.25rem; --nav-h: 62px; }
-    .nav-inner { padding: 0 1.25rem; }
+    :root { --gutter: 1.25rem; --nav-h: 62px; --foot-h: 48px; }
     .nav-links { display: none; }
     .mobile-toggle { display: block; }
-    main { padding: calc(var(--nav-h) + 3rem) 1.25rem 3rem; }
-    .page-head { gap: 0.65rem; margin-bottom: 2.5rem; }
-    .page-index { font-size: 0.68rem; }
-    .page-title-block h1 { font-size: 1.75rem; letter-spacing: -0.038em; }
-    .booking-wrap { max-width: 100%; }
-    .calendly-inline-widget { height: 680px !important; min-height: 680px; }
-    footer { grid-template-columns: 1fr; text-align: center; gap: 1.2rem; padding: 2.2rem 1.25rem 3rem; }
-    .f-r { text-align: center; }
-    .f-l { font-size: 0.8rem; }
-    .f-r a { font-size: 0.8rem; }
-  }
-  @media (max-width: 400px) {
-    .page-title-block h1 { font-size: 1.5rem; }
-    .calendly-inline-widget { height: 620px !important; min-height: 620px; }
+    main { padding: 1rem 1.25rem 0; }
+    footer { grid-template-columns: 1fr auto 1fr; }
+    .f-l, .f-r a { font-size: 0.72rem; }
   }
 </style>
 </head>
 <body>
 
-<nav id="nav">
+<nav>
   <div class="nav-inner">
     <a href="index.html" class="logo">SG Practice</a>
     <div class="nav-links">
@@ -250,7 +183,6 @@
       <a href="index.html#results" class="nav-link">Selected Work</a>
       <a href="index.html#system" class="nav-link">The Build</a>
       <a href="index.html#process" class="nav-link">Process</a>
-
     </div>
   </div>
 </nav>
@@ -263,15 +195,7 @@
 </div>
 
 <main>
-  <div class="page-head">
-    <div class="page-index">SG / Strategy call</div>
-    <div class="page-title-block">
-      <h1>Book a call. <span class="h1-thin">We'll see if it's a fit.</span></h1>
-    </div>
-  </div>
-
   <div class="booking-wrap">
-    <!-- Calendly inline widget begin -->
     <div class="calendly-inline-widget" data-url="https://calendly.com/contact-sg-practice/strategy-call?background_color=ffffff&text_color=0a0a0a&primary_color=0a0a0a&hide_gdpr_banner=1" style="min-width:320px;"></div>
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     <script>
@@ -288,7 +212,6 @@
         }, 250);
       })();
     </script>
-    <!-- Calendly inline widget end -->
   </div>
 </main>
 
@@ -299,22 +222,16 @@
 </footer>
 
 <script>
-  var nav = document.getElementById('nav');
-  window.addEventListener('scroll', function() { nav.classList.toggle('scrolled', window.scrollY > 32); }, { passive: true });
-
   var mobileToggle = document.getElementById('mobileToggle');
   var mobileMenu = document.getElementById('mobileMenu');
   function setMenu(open) {
     mobileToggle.classList.toggle('active', open);
     mobileMenu.classList.toggle('open', open);
-    document.body.classList.toggle('menu-open', open);
     mobileToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   }
   mobileToggle.addEventListener('click', function() { setMenu(!mobileMenu.classList.contains('open')); });
   mobileMenu.querySelectorAll('a').forEach(function(link) { link.addEventListener('click', function() { setMenu(false); }); });
-  mobileMenu.addEventListener('click', function(e) { if (e.target === mobileMenu) setMenu(false); });
   document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && mobileMenu.classList.contains('open')) setMenu(false); });
-  window.addEventListener('resize', function() { if (window.innerWidth > 820 && mobileMenu.classList.contains('open')) setMenu(false); });
 </script>
 </body>
 </html>
