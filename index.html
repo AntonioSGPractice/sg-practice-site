@@ -243,7 +243,7 @@
   /* ===== SERVICES ===== */
   .svc-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
   }
   .svc-card {
@@ -294,6 +294,19 @@
     color: var(--text-3);
     line-height: 1.6;
     letter-spacing: -0.005em;
+  }
+  .svc-card-tag {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-4);
+    margin-top: auto;
+    padding-top: 1.5rem;
+  }
+  @media (max-width: 1100px) {
+    .svc-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
   /* ===== STATS ===== */
@@ -571,28 +584,36 @@
     <div class="sec-index">SG / 01 — Services</div>
     <div class="sec-title-block">
       <h2>The full stack, assembled to fit.</h2>
-      <p class="sec-body">Paid advertising to create demand, an automated booking system to convert it, and pipeline visibility across both — installed as the connected system your business needs. The components are proven; the configuration is yours.</p>
+      <p class="sec-body">An automated booking system to convert demand and pipeline visibility to track it — the core every build runs on. Paid advertising to create demand and design consulting to sharpen what converts it, added when your business needs them. The components are proven; the configuration is yours.</p>
     </div>
   </div>
 
   <div class="svc-grid reveal">
     <div class="svc-card">
       <span class="svc-card-n">01</span>
-      <div class="svc-card-icon"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2"/></svg></div>
-      <div class="svc-card-t">Paid Advertising</div>
-      <div class="svc-card-d">Campaigns engineered to surface the highest-intent buyers and stretch every dollar of ad spend.</div>
-    </div>
-    <div class="svc-card">
-      <span class="svc-card-n">02</span>
       <div class="svc-card-icon"><svg viewBox="0 0 16 16"><rect x="2" y="3" width="12" height="11" rx="1"/><path d="M2 6h12M5 2v2M11 2v2"/><path d="M6 10l1.5 1.5L10 9"/></svg></div>
       <div class="svc-card-t">Booking System</div>
       <div class="svc-card-d">Every inquiry is contacted within seconds, then qualified and booked through an AI conversation built around your offer.</div>
     </div>
     <div class="svc-card">
-      <span class="svc-card-n">03</span>
+      <span class="svc-card-n">02</span>
       <div class="svc-card-icon"><svg viewBox="0 0 16 16"><path d="M2 14h12"/><rect x="3" y="9" width="2.4" height="5"/><rect x="6.8" y="6" width="2.4" height="8"/><rect x="10.6" y="3" width="2.4" height="11"/></svg></div>
       <div class="svc-card-t">Pipeline Visibility</div>
       <div class="svc-card-d">Every inquiry logged with score, status, and full contact history.</div>
+    </div>
+    <div class="svc-card">
+      <span class="svc-card-n">03</span>
+      <div class="svc-card-icon"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2"/></svg></div>
+      <div class="svc-card-t">Paid Advertising</div>
+      <div class="svc-card-d">Campaigns engineered to surface the highest-intent buyers and stretch every dollar of ad spend.</div>
+      <div class="svc-card-tag">Engaged as needed</div>
+    </div>
+    <div class="svc-card">
+      <span class="svc-card-n">04</span>
+      <div class="svc-card-icon"><svg viewBox="0 0 16 16"><path d="M11 2l3 3-8.5 8.5L2 14l.5-3.5z"/><path d="M9.5 3.5l3 3"/></svg></div>
+      <div class="svc-card-t">Design Consulting</div>
+      <div class="svc-card-d">Landing pages and the surfaces buyers touch, designed to convert as cleanly as the system runs.</div>
+      <div class="svc-card-tag">Engaged as needed</div>
     </div>
   </div>
 </section>
