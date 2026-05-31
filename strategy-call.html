@@ -93,24 +93,6 @@
   .nav-links { display: flex; gap: 2.4rem; align-items: center; }
   .nav-link { font-size: 0.88rem; font-weight: 400; color: var(--text-3); transition: color 0.3s; letter-spacing: 0.06em; text-transform: uppercase; }
   .nav-link:hover { color: var(--text); }
-  .nav-back {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.55rem;
-    font-size: 0.72rem;
-    font-weight: 400;
-    color: var(--text);
-    background: transparent;
-    padding: 0.7rem 1.2rem;
-    border: 0.5px solid var(--border-2);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    transition: border-color 0.3s, opacity 0.3s;
-  }
-  .nav-back:hover { border-color: var(--text); opacity: 1; }
-  .nav-back svg { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 1.75; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1); }
-  .nav-back:hover svg { transform: translateX(-3px); }
-
   /* ===== MOBILE TOGGLE ===== */
   .mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 10px; position: fixed; top: calc(env(safe-area-inset-top, 0px) + 13px); right: 1.25rem; z-index: 115; width: 44px; height: 44px; }
   .mobile-toggle span { display: block; width: 22px; height: 1.5px; background: var(--text); margin: 5px auto; transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), opacity 0.3s; transform-origin: center; }
@@ -268,7 +250,7 @@
       <a href="index.html#results" class="nav-link">Selected Work</a>
       <a href="index.html#system" class="nav-link">The Build</a>
       <a href="index.html#process" class="nav-link">Process</a>
-      <a href="strategy-call.html" class="nav-back"><svg viewBox="0 0 16 16"><path d="M13 8H3M7 4L3 8l4 4"/></svg> Back to home</a>
+
     </div>
   </div>
 </nav>
