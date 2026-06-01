@@ -179,12 +179,28 @@
   }
   .hero-actions {
     display: flex;
-    gap: 1.4rem;
+    flex-direction: column;
+    gap: 1.15rem;
     align-items: center;
     justify-content: center;
     opacity: 0;
     animation: rise 1s cubic-bezier(0.16,1,0.3,1) 0.7s forwards;
   }
+  .hero-results {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    transition: color 0.3s;
+  }
+  .hero-results:hover { color: var(--text); }
+  .hero-results svg { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 1.75; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1); }
+  .hero-results:hover svg { transform: translateY(3px); }
 
   /* ===== BUTTONS ===== */
   .btn { display: inline-flex; align-items: center; gap: 0.6rem; font-family: var(--font-body); font-size: 1rem; font-weight: 400; letter-spacing: -0.005em; border-radius: 0; cursor: pointer; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s, background 0.3s, color 0.3s, border-color 0.3s; }
@@ -334,6 +350,14 @@
     line-height: 1;
     color: var(--text);
     font-variant-numeric: tabular-nums;
+  }
+  .stat-range { display: inline-flex; align-items: center; }
+  .stat-range .dash {
+    width: 0.42em;
+    height: 0.085em;          /* nudge 0.07–0.11 to match numeral weight */
+    margin: 0 0.12em;
+    background: currentColor;
+    transform: translateY(0.02em); /* lifts bar to the optical center of the figures */
   }
   .stat-lbl {
     font-size: 1.02rem;
@@ -579,6 +603,7 @@
     <p class="hero-body">We create the demand you need and convert the demand you have.</p>
     <div class="hero-actions">
       <a href="strategy-call.html" class="btn btn-w btn-filled">Book a call <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      <a href="#results" class="hero-results">View results <svg viewBox="0 0 16 16"><path d="M8 3v10M4 9l4 4 4-4"/></svg></a>
     </div>
   </div>
 </header>
@@ -637,7 +662,7 @@
   <div class="stats reveal">
     <div class="stat"><span class="stat-tag">Volume</span><div class="stat-val">117</div><div class="stat-lbl">Qualified leads per month</div></div>
     <div class="stat"><span class="stat-tag">Efficiency</span><div class="stat-val">$1.43</div><div class="stat-lbl">Average cost per lead</div></div>
-    <div class="stat"><span class="stat-tag">Bookings</span><div class="stat-val">25–30</div><div class="stat-lbl">Booked consultations per month</div></div>
+    <div class="stat"><span class="stat-tag">Bookings</span><div class="stat-val"><span class="stat-range">25<i class="dash"></i>30</span></div><div class="stat-lbl">Booked consultations per month</div></div>
   </div>
 
   <div class="cs reveal">
