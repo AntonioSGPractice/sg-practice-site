@@ -353,6 +353,16 @@
     color: var(--text);
     font-variant-numeric: tabular-nums;
   }
+  .stat-approx { display: inline-flex; align-items: baseline; gap: 0.4em; }
+  .stat-approx .pre {
+    font-family: var(--font-mono);
+    font-size: 0.34em;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-4);
+    white-space: nowrap;
+  }
   .stat-range { display: inline-flex; align-items: center; }
   .stat-range .dash {
     width: 0.42em;
@@ -680,7 +690,7 @@
   </div>
 
   <div class="stats reveal">
-    <div class="stat"><span class="stat-tag">Volume</span><div class="stat-val">~117</div><div class="stat-lbl">Leads per month</div></div>
+    <div class="stat"><span class="stat-tag">Volume</span><div class="stat-val"><span class="stat-approx">117<span class="pre">Approx.</span></span></div><div class="stat-lbl">Leads per month</div></div>
     <div class="stat"><span class="stat-tag">Efficiency</span><div class="stat-val">$1.43</div><div class="stat-lbl">Average cost per lead</div></div>
     <div class="stat"><span class="stat-tag">Bookings</span><div class="stat-val"><span class="stat-range">25<i class="dash"></i>30</span></div><div class="stat-lbl">Booked consultations per month</div></div>
   </div>
