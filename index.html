@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>SG Practice</title>
-<meta name="description" content="We design and install end-to-end client acquisition systems for service businesses. One connected system, built for your buyer.">
+<meta name="description" content="We build the revenue system service businesses run on. From first contact to booked revenue, one connected system, scoped to your business.">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
@@ -146,7 +146,7 @@
     font-size: clamp(2.7rem, 6vw, 5.2rem);
     line-height: 0.9;
     letter-spacing: -0.055em;
-    max-width: 16ch;
+    max-width: 26ch;
     margin: 0 auto;
     color: var(--text);
     opacity: 0;
@@ -156,6 +156,8 @@
     font-weight: 400;
     color: #3a3a3a;
   }
+  .h1-br { display: inline; }
+  @media (max-width: 820px) { .h1-br { display: none; } }
 
   .hero-row {
     display: flex;
@@ -566,6 +568,41 @@
     .svc-card { min-height: 18.5rem; }
     .stat-val { font-size: 2rem; }
   }
+  /* ===== HERO EYEBROW (descriptor) ===== */
+  .hero-eyebrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-4);
+    opacity: 0;
+    animation: rise 0.9s cubic-bezier(0.16,1,0.3,1) 0.15s forwards;
+  }
+  .hero-eyebrow .he-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--text-4); }
+
+  /* ===== METHOD (map → build → run) ===== */
+  .method-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .method-step {
+    padding: 2.2rem 1.9rem 2.4rem;
+    border: 0.5px solid var(--border);
+    background: var(--card);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .method-step:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+  .method-n { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-4); margin-bottom: 1.4rem; }
+  .method-step h3 { font-family: var(--font-display); font-weight: 400; font-size: 1.45rem; letter-spacing: -0.03em; line-height: 1.12; color: var(--text); margin-bottom: 0.7rem; max-width: 14ch; }
+  .method-step p { font-size: 0.98rem; line-height: 1.6; color: var(--text-2); letter-spacing: -0.005em; }
+  @media (max-width: 820px) { .method-grid { grid-template-columns: 1fr; } }
+
 </style>
 </head>
 <body>
@@ -596,17 +633,48 @@
 <header class="hero">
   <div class="hero-index">Index</div>
   <div class="hero-grid">
-    <h1>We turn demand into <span class="hero-muted">bookings.</span></h1>
+    <div class="hero-eyebrow"><span class="he-dot"></span>Bespoke revenue systems</div>
+    <h1>We build the system your<br class="h1-br">growth runs on.</h1>
   </div>
 
   <div class="hero-row">
-    <p class="hero-body">We create the demand you need and convert the demand you have.</p>
+    <p class="hero-body">From first contact to booked revenue, one connected system.</p>
     <div class="hero-actions">
       <a href="strategy-call.html" class="btn btn-w btn-filled">Book a call <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
       <a href="#results" class="hero-results">View results <svg viewBox="0 0 16 16"><path d="M8 3v10M4 9l4 4 4-4"/></svg></a>
     </div>
   </div>
 </header>
+
+<div class="rule"><hr></div>
+
+<section id="method">
+  <div class="sec-head reveal">
+    <div class="sec-index">The method</div>
+    <div class="sec-title-block">
+      <h2>One system, mapped to how you actually sell.</h2>
+      <p class="sec-body">Not a tactic bolted on. We map the path your customers take, build the system that runs it, then let it run, sized to your business.</p>
+    </div>
+  </div>
+
+  <div class="method-grid reveal">
+    <div class="method-step">
+      <div class="method-n">Map</div>
+      <h3>How customers find and book you</h3>
+      <p>We trace the full path from first contact to booked, and find exactly where demand stalls or leaks today.</p>
+    </div>
+    <div class="method-step">
+      <div class="method-n">Build</div>
+      <h3>The system that runs it</h3>
+      <p>Acquisition, intake, instant contact, follow-up, booking, and tracking, assembled as one connected system, scoped to what you need.</p>
+    </div>
+    <div class="method-step">
+      <div class="method-n">Run</div>
+      <h3>Demand into booked revenue</h3>
+      <p>Automation and AI carry every inquiry to a booking without manual effort, and you see exactly what's producing revenue.</p>
+    </div>
+  </div>
+</section>
 
 <div class="rule"><hr></div>
 
