@@ -381,6 +381,43 @@
     letter-spacing: -0.005em;
   }
 
+  /* ===== PROOF STRIP (under hero) ===== */
+  .proof-strip {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+  }
+  .proof-strip-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 0.5px solid var(--border);
+    border-bottom: 0.5px solid var(--border);
+  }
+  .ps-item { padding: 1.9rem 2.2rem; border-right: 0.5px solid var(--border); display: flex; flex-direction: column; gap: 0.45rem; }
+  .ps-item:last-child { border-right: none; }
+  .ps-val { font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; letter-spacing: -0.035em; line-height: 1; color: var(--text); font-variant-numeric: tabular-nums; display: inline-flex; align-items: center; }
+  .ps-val .dash { width: 0.42em; height: 0.1em; margin: 0 0.12em; background: currentColor; transform: translateY(0.02em); }
+  .ps-lbl { font-family: var(--font-mono); font-size: 0.68rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-4); }
+
+  /* ===== FIT ===== */
+  .fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .fit-col { padding: 2.2rem 2rem 2.4rem; border: 0.5px solid var(--border); background: var(--bg); transition: border-color 0.3s; }
+  .fit-col:hover { border-color: var(--border-hover); }
+  .fit-col.is-yes { background: var(--card); }
+  .fit-tag { font-family: var(--font-mono); font-size: 0.68rem; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-4); margin-bottom: 1.5rem; }
+  .fit-list { list-style: none; display: flex; flex-direction: column; gap: 0.95rem; }
+  .fit-list li { font-size: 1rem; font-weight: 400; line-height: 1.6; color: var(--text-2); letter-spacing: -0.005em; padding-left: 1.35rem; position: relative; }
+  .fit-list li::before { content: ''; position: absolute; left: 0; top: 0.68em; width: 8px; height: 1px; background: var(--text-4); }
+  .fit-note { margin-top: 2.6rem; padding-top: 1.8rem; border-top: 0.5px solid var(--border); font-size: 1rem; line-height: 1.7; color: var(--text-3); letter-spacing: -0.005em; max-width: 62ch; }
+
+  /* ===== OPERATOR ===== */
+  .op { display: grid; grid-template-columns: auto 1fr; gap: 2.4rem; align-items: start; border: 0.5px solid var(--border); padding: 2.8rem 3rem; transition: border-color 0.3s; }
+  .op:hover { border-color: var(--border-hover); }
+  .op-mark { font-family: var(--font-display); font-size: 1.15rem; font-weight: 500; letter-spacing: -0.02em; color: var(--text); width: 64px; height: 64px; border: 0.5px solid var(--border-2); display: flex; align-items: center; justify-content: center; }
+  .op-name { font-family: var(--font-display); font-size: 1.35rem; font-weight: 500; letter-spacing: -0.028em; color: var(--text); margin-bottom: 0.9rem; line-height: 1.2; }
+  .op p { font-size: 1.08rem; font-weight: 400; line-height: 1.72; color: var(--text-2); letter-spacing: -0.005em; max-width: 62ch; }
+  .op p + p { margin-top: 1rem; }
+
   /* ===== CASE STUDY ===== */
   .cs {
     border: 0.5px solid var(--border);
@@ -513,6 +550,14 @@
     .cs-item { border-right: none !important; border-bottom: 1px solid var(--border) !important; }
     .cs-item:last-child { border-bottom: none !important; }
     .steps { grid-template-columns: 1fr; gap: 0; }
+    .proof-strip-inner { grid-template-columns: 1fr; }
+    .ps-item { padding: 1.5rem 1.25rem; border-right: none; border-bottom: 0.5px solid var(--border); }
+    .ps-item:last-child { border-bottom: none; }
+    .fit-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+    .fit-col { padding: 1.7rem 1.4rem 1.9rem; }
+    .op { grid-template-columns: 1fr; gap: 1.5rem; padding: 1.8rem 1.5rem; }
+    .op-name { font-size: 1.2rem; }
+    .op p { font-size: 1.02rem; }
     .step { padding: 2rem 0 0 0 !important; border-right: none; }
     .step:not(:first-child) { margin-top: 1.5rem; }
     .step h3 { font-size: 1.4rem; }
@@ -575,8 +620,9 @@
   <div class="nav-inner">
     <a href="#" class="logo">SG Practice</a>
     <div class="nav-links">
+      <a href="#results" class="nav-link">Work</a>
       <a href="#services" class="nav-link">Services</a>
-      <a href="#results" class="nav-link">Selected Work</a>
+      <a href="#fit" class="nav-link">Fit</a>
       <a href="#process" class="nav-link">Process</a>
       <a href="discovery-call.html" class="nav-cta">Book a call</a>
     </div>
@@ -585,8 +631,9 @@
 <button class="mobile-toggle" id="mobileToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 
 <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Main menu">
+  <a href="#results">Work</a>
   <a href="#services">Services</a>
-  <a href="#results">Selected Work</a>
+  <a href="#fit">Fit</a>
   <a href="#process">Process</a>
   <a href="discovery-call.html" class="mm-cta">Book a call</a>
   <div class="mm-foot">contact@sg-practice.com</div>
@@ -595,12 +642,12 @@
 <header class="hero">
   <div class="hero-index">Index</div>
   <div class="hero-grid">
-    <div class="hero-eyebrow"><span class=></span> </div>
+    <div class="hero-eyebrow"><span class="he-dot"></span> Client acquisition systems</div>
     <h1>The system your growth <br class="h1-br">runs on.</h1>
   </div>
 
   <div class="hero-row">
-    <p class="hero-body">Demand generated to qualified consultations booked. One connected system.</p>
+    <p class="hero-body">Demand generated to qualified consultations booked. One connected system, live in two weeks.</p>
     <div class="hero-actions">
       <a href="discovery-call.html" class="btn btn-w btn-filled">Book a call <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
       <a href="#results" class="hero-results">View results <svg viewBox="0 0 16 16"><path d="M8 3v10M4 9l4 4 4-4"/></svg></a>
@@ -608,47 +655,21 @@
   </div>
 </header>
 
-<div class="rule"><hr></div>
-
-<section id="services">
-  <div class="sec-head reveal">
-    <div class="sec-index">Services</div>
-    <div class="sec-title-block">
-      <h2>The entire build, in two parts.</h2>
-      <p class="sec-body">Not a tactic bolted on. One system mapped to how you actually sell: acquisition and booking, built and run together. Live within two weeks of signing.</p>
-    </div>
+<div class="proof-strip reveal">
+  <div class="proof-strip-inner">
+    <div class="ps-item"><div class="ps-val"><span class="stat-range">25<i class="dash"></i>30</span></div><div class="ps-lbl">Consultations booked / month</div></div>
+    <div class="ps-item"><div class="ps-val">Seconds</div><div class="ps-lbl">Inquiry to first contact</div></div>
+    <div class="ps-item"><div class="ps-val">2 weeks</div><div class="ps-lbl">Signing to system live</div></div>
   </div>
-
-  <div class="svc-grid reveal">
-    <div class="svc-card">
-      <span class="svc-card-n">01</span>
-      <div class="svc-card-icon"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2"/></svg></div>
-      <div class="svc-card-t">Paid Acquisition</div>
-      <div class="svc-card-d">Meta campaigns engineered to surface the highest-intent buyers and drive them straight into the booking system.</div>
-    </div>
-    <div class="svc-card">
-      <span class="svc-card-n">02</span>
-      <div class="svc-card-icon"><svg viewBox="0 0 16 16"><rect x="2" y="3" width="12" height="11" rx="1"/><path d="M2 6h12M5 2v2M11 2v2"/><path d="M6 10l1.5 1.5L10 9"/></svg></div>
-      <div class="svc-card-t">Booking System</div>
-      <div class="svc-card-d">Every inquiry is contacted within seconds, then qualified and booked through an AI conversation built around your offer. Each one logged with score, status, and full history, so you see the whole pipeline.</div>
-    </div>
-  </div>
-</section>
-
-<div class="rule"><hr></div>
+</div>
 
 <section id="results">
   <div class="sec-head reveal">
-    <div class="sec-index">Selected work</div>
+    <div class="sec-index">01 / Selected work</div>
     <div class="sec-title-block">
       <h2>Proof from a live build.</h2>
+      <p class="sec-body">One system, running as the firm's primary source of new business.</p>
     </div>
-  </div>
-
-  <div class="stats reveal">
-    <div class="stat"><span class="stat-tag">Volume</span><div class="stat-val"><span class="stat-approx">117<span class="pre">(approx.)</span></span></div><div class="stat-lbl">Leads per month</div></div>
-    <div class="stat"><span class="stat-tag">Efficiency</span><div class="stat-val">$1.43</div><div class="stat-lbl">Average cost per lead</div></div>
-    <div class="stat"><span class="stat-tag">Bookings</span><div class="stat-val"><span class="stat-range">25<i class="dash"></i>30</span></div><div class="stat-lbl">Booked consultations per month</div></div>
   </div>
 
   <div class="cs reveal">
@@ -668,19 +689,104 @@
 
 <div class="rule"><hr></div>
 
+<section id="services">
+  <div class="sec-head reveal">
+    <div class="sec-index">02 / Services</div>
+    <div class="sec-title-block">
+      <h2>The entire build, in two parts.</h2>
+      <p class="sec-body">Not a tactic bolted on. One system mapped to how you actually sell: acquisition and booking, built and run together.</p>
+    </div>
+  </div>
+
+  <div class="svc-grid reveal">
+    <div class="svc-card">
+      <span class="svc-card-n">01</span>
+      <div class="svc-card-icon"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2"/></svg></div>
+      <div class="svc-card-t">Paid Acquisition</div>
+      <div class="svc-card-d">Meta campaigns engineered to surface the highest-intent buyers and drive them straight into the booking system.</div>
+      <div class="svc-card-tag">Creative / Targeting / Spend</div>
+    </div>
+    <div class="svc-card">
+      <span class="svc-card-n">02</span>
+      <div class="svc-card-icon"><svg viewBox="0 0 16 16"><rect x="2" y="3" width="12" height="11" rx="1"/><path d="M2 6h12M5 2v2M11 2v2"/><path d="M6 10l1.5 1.5L10 9"/></svg></div>
+      <div class="svc-card-t">Booking System</div>
+      <div class="svc-card-d">Every inquiry is contacted within seconds, then qualified and booked through an AI conversation built around your offer. It screens and schedules, nothing more. Each inquiry is logged with score, status, and full history, so you see the whole pipeline.</div>
+      <div class="svc-card-tag">Capture / Qualify / Book</div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"><hr></div>
+
+<section id="fit">
+  <div class="sec-head reveal">
+    <div class="sec-index">03 / Fit</div>
+    <div class="sec-title-block">
+      <h2>Who this is built for.</h2>
+      <p class="sec-body">The system only works where the sale runs through a booked conversation. That rules some businesses out, and it should.</p>
+    </div>
+  </div>
+
+  <div class="fit-grid reveal">
+    <div class="fit-col is-yes">
+      <div class="fit-tag">Built for</div>
+      <ul class="fit-list">
+        <li>Consultation-led sales, where a booked call is the conversion event</li>
+        <li>An offer that is already selling, just not predictably</li>
+        <li>Owners who want more qualified conversations, not more raw leads</li>
+        <li>Firms ready to run paid spend as a line item, not a test</li>
+      </ul>
+    </div>
+    <div class="fit-col">
+      <div class="fit-tag">Not a fit</div>
+      <ul class="fit-list">
+        <li>Businesses that close at the door or on a dispatch, not on a call</li>
+        <li>Anyone still deciding what the offer is</li>
+        <li>Volume lead delivery with no qualification layer</li>
+        <li>Teams looking to hand off one tactic in isolation</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PRICING SIGNAL: add your real numbers here, e.g. build fee + monthly, or a minimum ad spend. Leave out until you are ready to state it. -->
+  <p class="fit-note reveal">If you are not sure which side you fall on, the discovery call is the fastest way to find out. I will tell you if it is not a fit.</p>
+</section>
+
+<div class="rule"><hr></div>
+
 <section id="process">
   <div class="sec-head reveal">
-    <div class="sec-index">Process</div>
+    <div class="sec-index">04 / Process</div>
     <div class="sec-title-block">
-      <h2>Three steps to a system that runs itself.</h2>
-      <p class="sec-body">From the first call to a system you don't have to think about.</p>
+      <h2>Three steps to a pipeline you stop thinking about.</h2>
+      <p class="sec-body">From the first call to a system that runs without your attention.</p>
     </div>
   </div>
 
   <div class="steps reveal">
-    <div class="step"><p class="step-n">Step 01</p><h3>Discovery Call</h3><p>I map the offer, audience, and booking goal.</p></div>
-    <div class="step"><p class="step-n">Step 02</p><h3>System Build</h3><p>I install the ad, capture, qualification, and booking system.</p></div>
-    <div class="step"><p class="step-n">Step 03</p><h3>Ongoing Management</h3><p>I manage campaigns, optimize the system, and keep qualified consultations flowing.</p></div>
+    <div class="step"><p class="step-n">Step 01</p><h3>Discovery Call</h3><p>I map the offer, the audience worth paying for, and the consultation volume you can actually absorb.</p></div>
+    <div class="step"><p class="step-n">Step 02</p><h3>System Build</h3><p>I install the ad, capture, qualification, and booking system. Live in two weeks.</p></div>
+    <div class="step"><p class="step-n">Step 03</p><h3>Ongoing Management</h3><p>I run the campaigns and keep qualified consultations flowing.</p></div>
+  </div>
+</section>
+
+<div class="rule"><hr></div>
+
+<section id="operator">
+  <div class="sec-head reveal">
+    <div class="sec-index">05 / Operator</div>
+    <div class="sec-title-block">
+      <h2>You work with the person who builds it.</h2>
+    </div>
+  </div>
+
+  <div class="op reveal">
+    <div class="op-mark">SG</div>
+    <div>
+      <div class="op-name">Antonio Meschino</div>
+      <p>SG Practice is one operator. I run the discovery call, build the system, write the campaigns, and manage the account. Nothing is handed to a junior, because there isn't one.</p>
+      <p>That caps how many accounts I take at once. It also means the person who sold you the system is the person answering when something needs to change.</p>
+    </div>
   </div>
 </section>
 
@@ -689,6 +795,7 @@
 <section class="cta">
   <div class="reveal cta-meta">Begin</div>
   <h2 class="reveal">Let's talk.</h2>
+  <p class="reveal">Fifteen minutes. I map your offer, tell you whether the system fits, and show you what the build would look like. No deck.</p>
   <div class="reveal"><a href="discovery-call.html" class="btn btn-w btn-filled">Book a call <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
 </section>
 
